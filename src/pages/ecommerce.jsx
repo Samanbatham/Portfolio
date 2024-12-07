@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 
-import productDetail from "../asset/productDetail.mp4";
-import search from "../asset/search.mp4";
-import paymentBg from "../asset/paymentbg.mp4";
-import adminbg from "../asset/adminbg.mp4";
+import productDetail from "../asset/productDetail (1).webm";
+import search from "../asset/search (1).webm";
+import paymentBg from "../asset/paymentbg.webm";
+import adminbg from "../asset/adminbg.webm";
 import {
   Card,
   CardContent,
