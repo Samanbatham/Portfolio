@@ -1,16 +1,5 @@
 import React, { useEffect, useState } from "react";
 
-import productDetail from "../asset/productDetail.mp4";
-import search from "../asset/search.mp4";
-import paymentBg from "../asset/paymentbg.mp4";
-import adminbg from "../asset/adminbg.mp4";
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
-
 function Ecommerce() {
   const [ecommerceVisible, setEcommerceVisible] = useState(false);
   const [technologyVisible, setTechnologyVisible] = useState(false);
