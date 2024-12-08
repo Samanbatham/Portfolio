@@ -13,7 +13,7 @@ function Resume() {
   const [knowledgeButtons, setKnowledgeButtons] = useState([]);
   const [scale, setScale] = useState([]);
   const [cv, setCv] = useState("scale-0");
-  const fileUrl = "/Saman_Batham.pdf";
+  const fileUrl = "/SamanDeepBatham_WebDeveloper.pdf";
 
   const animateProgress = (targetValue, setterFunction) => {
     let currentValue = 0;
@@ -91,7 +91,7 @@ function Resume() {
               <Button
                 className={`lg:p-5 xs:p-2 bg-green-400 text-black font-extrabold rounded-[2px] shadow-lg mt-8 hover:text-white transform transition-transform duration-500 ${cv}`}
               >
-                <a href={fileUrl} download={"Saman_Batham.pdf"}>
+                <a href={fileUrl} download={"SamanDeepBatham_Developer.pdf"}>
                   Download CV
                 </a>
               </Button>

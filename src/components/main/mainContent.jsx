@@ -12,7 +12,7 @@ function MainContent() {
   const [textIndex, setTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
-  const fileUrl = "/Saman_Batham.pdf";
+  const fileUrl = "/SamanDeepBatham_WebDeveloper.pdf";
 
   const [ecommerceVisible, setEcommerceVisible] = useState(false);
   const [chatAppVisible, setChatAppVisible] = useState(false);
@@ -116,7 +116,7 @@ function MainContent() {
             <Button
               className={`lg:p-5 bg-green-400 text-black font-extrabold rounded-[2px] shadow-lg lg:text-sm xs:text-[15px] xs:p-3 hover:text-white transform transition-transform duration-500 ${cv}`}
             >
-              <a href={fileUrl} download={"Saman_Batham.pdf"}>
+              <a href={fileUrl} download={"SamanDeepBatham_Developer.pdf"}>
                 {" "}
                 Download CV
               </a>
