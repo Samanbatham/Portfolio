@@ -20,7 +20,7 @@ function MainContent() {
   const texts = [
     "I am a Self-Taught MERN Stack Developer.....",
     "I have 7 years of experience in animation...",
-    "Looking for exciting opportuinity to start my career!",
+    "Looking for exciting opportunity to start my career!",
   ];
   useEffect(() => {
     const handleTyping = () => {
@@ -109,7 +109,7 @@ function MainContent() {
             <p className="text-white lg:text-xl sm:text-sm md:text-md  xs:text-[10px]">
               I am an aspiring MERN Stack Developer.I have prior experience of 7
               Years in animation.I am eager to start my career.If you have any
-              opportuinity for me Pls contact me.
+              opportunity for me Pls contact me.
             </p>
           </div>
           <div className="flex gap-2 pt-5">
