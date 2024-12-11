@@ -12,7 +12,7 @@ function MainContent() {
   const [textIndex, setTextIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [charIndex, setCharIndex] = useState(0);
-  const fileUrl = "/SamanDeepBatham_WebDeveloper.pdf";
+  const fileUrl = "/SamanDeepBatham_Developer.pdf";
 
   const [ecommerceVisible, setEcommerceVisible] = useState(false);
   const [chatAppVisible, setChatAppVisible] = useState(false);

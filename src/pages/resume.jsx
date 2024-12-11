@@ -13,7 +13,7 @@ function Resume() {
   const [knowledgeButtons, setKnowledgeButtons] = useState([]);
   const [scale, setScale] = useState([]);
   const [cv, setCv] = useState("scale-0");
-  const fileUrl = "/SamanDeepBatham_WebDeveloper.pdf";
+  const fileUrl = "/SamanDeepBatham_Developer.pdf";
 
   const animateProgress = (targetValue, setterFunction) => {
     let currentValue = 0;
