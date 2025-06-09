@@ -43,65 +43,78 @@ function Contact() {
       );
   };
   return (
-    <div className="flex w-full h-screen items-center justify-center bg-black font-raleway lg:ml-[15%] xs:ml-0 ">
-      <Card className="lg:h-[400px] xs:[200px] shadow-[2px_2px_10px_4px_rgb(100,100,100,1)]">
-        <CardContent className="flex flex-col items-center gap-3 w-[400px] ">
-          <form onSubmit={handleSubmit}>
-            <div className="flex flex-col items-center gap-3 w-[400px] ">
+    <div className="flex w-full h-screen items-center justify-center bg-black font-raleway lg:pl-[200px] md:pl-[150px] p-4 ">
+      <Card className=" w-full max-w-md  max-h-[400px] shadow-[2px_2px_10px_4px_rgb(100,100,100,1)]">
+        <CardContent >
+          <form onSubmit={handleSubmit} className="w-full">
+            <div className="flex flex-col items-center gap-3  ">
               <h1 className="font-bold text-2xl pt-4">Contact</h1>
 
-              <div className="flex items-center gap-2  ">
-                <h1 className="font-bold">Your Name:</h1>
+              <div className="grid grid-cols-[1fr_2fr] w-full items-center">
+               
+                  <label className="font-bold">Your Name:</label>
+                
+                
+                  <Input
+                    name="name"
+                    placeholder="Type Your Name"
+                    className="w-full"
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
+                
+              </div> 
+              <div className="grid grid-cols-[1fr_2fr] w-full items-center">
+                <div className="flex items-start ">
+                  <h1 className="font-bold">Your Email:</h1>
+                </div>
+                <div>
+                  <Input
+                    name="email"
+                    placeholder="Type Your Email"
+                    className="w-full"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
+                </div>
+              </div>
 
-                <Input
-                  name="name"
-                  placeholder="Type Your Name"
-                  className="w-[250px]"
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="flex items-center gap-2  ">
-                <h1 className="font-bold">Your Email:</h1>
-                <Input
-                  name="email"
-                  placeholder="Type Your Email"
-                  className="w-[250px]"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="flex items-center gap-2 ">
-                <h1 className="font-bold ml-8">Phone:</h1>
+              <div className="grid grid-cols-[1fr_2fr] w-full items-center">
+                <h1 className="font-bold ">Phone:</h1>
+
                 <Input
                   name="phone"
                   placeholder="Type Your Phone"
-                  className="w-[250px] "
+                  className="w-full"
                   value={formData.phone}
                   onChange={handleChange}
                 />
               </div>
-              <div className="flex items-center gap-2 ">
-                <h1 className="font-bold ml-10">Query:</h1>
-                <textarea
-                  name="query"
-                  rows={5}
-                  cols={120}
-                  placeholder="Type Your Query"
-                  className="w-[250px] border pl-2  mr-1  pr-10"
-                  value={formData.query}
-                  onChange={handleChange}
-                />
+              <div className="grid grid-cols-[1fr_2fr] w-full items-center">
+                <div className="flex items-center ">
+                  <h1 className="font-bold ">Query:</h1>
+                </div>
+                <div>
+                  <textarea
+                    name="query"
+                    rows={5}
+                    cols={30}
+                    placeholder="Type Your Query"
+                    className=" border w-full "
+                    value={formData.query}
+                    onChange={handleChange}
+                  />
+                </div>
               </div>
-              <div className="flex items-center gap-2">
-                <Button
-                  type="submit"
-                  className="bg-green-400 text-black font-bold"
-                  disabled={disable}
-                >
-                  {disable ? "Sending..." : "Submit"}
-                </Button>
-              </div>
+            </div>
+            <div className="flex items-center justify-center ">
+              <Button
+                type="submit"
+                className="bg-green-400 text-black font-bold"
+                disabled={disable}
+              >
+                {disable ? "Sending..." : "Submit"}
+              </Button>
             </div>
           </form>
         </CardContent>

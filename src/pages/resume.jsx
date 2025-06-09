@@ -31,8 +31,8 @@ function Resume() {
     animateProgress(75, setReactjs);
     animateProgress(85, setExpress);
     animateProgress(65, setMongodb);
-
-    const buttonDelay = [
+  }, []);
+  const buttonData = [
       "Javascript",
       "NodeJs",
       "MongoDB",
@@ -48,38 +48,10 @@ function Resume() {
       "WebDesign",
     ];
 
-    buttonDelay.forEach((button, index) => {
-      setTimeout(() => {
-        setKnowledgeButtons((prev) => [...prev, button]);
-        setScale((prevScale) => [...prevScale, "scale-0"]);
-      }, index * 300);
-    });
-  }, []);
-  useEffect(() => {
-    if (knowledgeButtons.length > 0) {
-      knowledgeButtons.forEach((_, index) => {
-        setTimeout(() => {
-          setScale((prevScale) => {
-            const newScale = [...prevScale];
-            newScale[index] = "scale-100";
-            return newScale;
-          });
-        }, index * 200);
-      });
-    }
-  }, [knowledgeButtons]);
-  useEffect(() => {
-    setCv("scale-0");
-    const timer = setTimeout(() => {
-      setCv("scale-100");
-    }, 100);
-    return () => clearTimeout(timer);
-  }, [location]);
-
   return (
-    <div className="flex flex-col w-full h-full bg-black font-raleway lg:ml-[25%] xs:ml-0">
+    <div className="flex flex-col w-full min-h-[100vh] bg-black font-raleway lg:pl-[200px] md:pl-[150px]">
       <div className="w-full flex flex-col">
-        <div className="flex flex-col items-center lg:pr-[150px] xs:pr-[100px]">
+        <div className="flex flex-col items-center">
           <div className="flex ">
             <div>
               <h1 className="font-extrabold text-3xl text-white  pt-10">
@@ -98,8 +70,8 @@ function Resume() {
             </div>
           </div>
         </div>
-        <div className="flex lg:flex-row xs:flex-col justify-evenly lg:p-20 xs:p-10">
-          <div className="w-[50%]">
+        <div className="grid md:grid-cols-2 grid-cols-1 mt-10 gap-20">
+          <div className="md:w-[80%] md:ml-20 ml-5">
             <div>
               <h1 className="font-bold text-white text-xl ">Education</h1>
               <Progress value={33} className="h-1 w-20" />
@@ -113,7 +85,7 @@ function Resume() {
                   University Of Lucknow
                 </h1>
               </div>
-              <div className="flex flex-col lg:pl-[50px] xs:pl-0 pt-3 lg:w-[500px] xs:w-[300px] text-white">
+              <div className="flex flex-col lg:pl-[50px] xs:pl-0 pt-3 w-full max-w-[800px] text-white">
                 <h1 className="font-bold text-white">Bachelor in Science</h1>
                 <div className="flex pt-2">
                   <div className="w-5 h-5">
@@ -139,43 +111,45 @@ function Resume() {
               </div>
             </div>
           </div>
-          <div className="w-[50%]">
+          <div className="md:w-[60%] md:ml-0 ml-5 mr-5">
             <div>
-              <h1 className="font-bold text-xl text-white lg:pt-0 xs:pt-10">Coding Skill</h1>
+              <h1 className="font-bold text-xl text-white md:pt-0 pt-10">
+                Coding Skill
+              </h1>
               <Progress value={33} className="h-1 w-20" />
             </div>
-            <div className="pt-10 lg:w-[400px] xs:w-[300px]">
+            <div className="pt-10 ">
               <div className="flex justify-between">
                 <h1 className="font-bold text-sm text-white">JavaScript</h1>
                 <h1 className="font-bold text-white">{javascript}</h1>
               </div>
-              <Progress value={javascript} className="h-1 lg:w-[400px] xs:w-[300px]" />
+              <Progress value={javascript} className="h-1 " />
               <div className="flex justify-between pt-4">
                 <h1 className="font-bold text-sm text-white">Node.Js</h1>
                 <h1 className="font-bold text-white">{nodejs}</h1>
               </div>
-              <Progress value={nodejs} className="h-1 lg:w-[400px] xs:w-[300px]" />
+              <Progress value={nodejs} className="h-1 " />
               <div className="flex justify-between pt-4">
                 <h1 className="font-bold text-white text-sm">React</h1>
                 <h1 className="font-bold text-white">{react}</h1>
               </div>
-              <Progress value={react} className="h-1 lg:w-[400px] xs:w-[300px]" />
+              <Progress value={react} className="h-1 " />
               <div className="flex justify-between pt-4">
                 <h1 className="font-bold text-white text-sm">Express</h1>
                 <h1 className="font-bold text-white">{express}</h1>
               </div>
-              <Progress value={express} className="h-1 lg:w-[400px] xs:w-[300px]" />
+              <Progress value={express} className="h-1 " />
               <div className="flex justify-between pt-4">
                 <h1 className="font-bold text-white text-sm">MongoDB</h1>
                 <h1 className="font-bold text-white">{mongodb}</h1>
               </div>
-              <Progress value={mongodb} className="h-1 lg:w-[400px] xs:w-[300px]" />
+              <Progress value={mongodb} className="h-1 " />
             </div>
           </div>
         </div>
       </div>
-      <div className="flex lg:flex-row xs:flex-col  justify-evenly lg:p-20 xs:p-10">
-        <div className="w-[50%]">
+      <div className="grid md:grid-cols-2 grid-cols-1 mt-10 mb-10 gap-20">
+        <div className="md:w-[80%] md:ml-20 ml-5">
           <div>
             <h1 className="font-bold text-xl text-white">Experience</h1>
             <Progress value={33} className="h-1 w-20" />
@@ -183,14 +157,14 @@ function Resume() {
           <div className="pt-8">
             <div className="flex items-center gap-5">
               <Button className="bg-gray-800 text-white shadow-[3px_3px_0px_0px_rgb(60,68,73,.2)]">
-                2022-2024
+                2025-Present
               </Button>
               <h1 className="text-sm font-bold text-white opacity-85">
-                Mikros Animation
+                Juego Studios
               </h1>
             </div>
-            <div className="flex flex-col lg:pl-[50px] xs:pl-0 pt-3 lg:w-[500px] xs:w-[300px] text-white">
-              <h1 className="font-bold text-white">Mid-Fx Artist</h1>
+            <div className="flex flex-col lg:pl-[50px] xs:pl-0 pt-3 w-full max-w-[500px] text-white">
+              <h1 className="font-bold text-white">Senior-Fx Artist</h1>
 
               <div className="flex pt-2">
                 <div className="w-8 h-8">
@@ -215,7 +189,7 @@ function Resume() {
                 <div className="w-5 h-5">
                   <CornerDownRight className="h-5 w-5 " />
                 </div>
-                <p>Gained expertise in Houdini,Maya and nuke.</p>
+                <p>Gained expertise in Unreal engine,Unity and Houdini.</p>
               </div>
               <div className="flex pt-2">
                 <div className="w-8 h-8">
@@ -229,16 +203,16 @@ function Resume() {
             </div>
           </div>
         </div>
-        <div className="w-[50%] lg:[t-0 xs:pt-10">
+        <div className="md:w-[50%] md:ml-0 ml-5">
           <div>
             <h1 className="font-bold text-xl text-white">Knowledges</h1>
             <Progress value={33} className="h-1 w-20" />
           </div>
-          <div className="flex flex-wrap w-[300px] gap-2 pt-5 ">
-            {knowledgeButtons.map((button, index) => (
+          <div className="flex flex-wrap gap-2 pt-5 ">
+            {buttonData.map((button, index) => (
               <Button
                 key={index}
-                className={`bg-green-400 text-black font-bold transform ${scale[index]} transition-transform duration-700 ease-out`}
+                className={`bg-green-400 text-black font-bold transform  transition-transform duration-700 ease-out`}
               >
                 {button}
               </Button>

@@ -133,7 +133,7 @@ function Sidebar() {
           </SheetContent>
         </Sheet>
       </div>
-    <div className=" flex flex-col fixed h-screen  gap-[250px] font-[poppins] w-[15%] border-r-2 xs:hidden md:flex lg:flex p-5 mr-2 shadow-xl bg-black">
+    <div className=" flex flex-col fixed h-screen  gap-[250px] font-[poppins] lg:min-w-[200px] md:min-w-[150px] border-r-2 xs:hidden md:flex p-5 mr-2 shadow-xl bg-black">
       <div className="flex flex-col items-center justify-center">
         <img src={profile} width={80} height={80} className="rounded-full" />
         <h1 className="pt-2 text-white">Saman Batham</h1>

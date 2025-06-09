@@ -4,7 +4,7 @@ import Sidebar from "./sidebar";
 
 function Layout() {
   return (
-    <div className='bg-black lg:w-full xs:w-[450px] h-full lg:flex xs:block'>
+    <div className='bg-black'>
       <Sidebar />
        <Outlet />
       

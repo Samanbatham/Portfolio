@@ -25,20 +25,24 @@ function Projects() {
 
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col lg:w-full items-center lg:h-screen xs:h-full lg:pb-0 xs:pb-2 gap-12 bg-black font-raleway lg:ml-[15%] xs:ml-0 xs:w-[430px]  ">
-      <h1 className="text-2xl text-white font-bold underline pt-7">Projects</h1>
+    <div className="flex flex-col items-center  bg-black font-raleway md:h-screen h-full lg:ml-[200px] md:ml-[150px] gap-10">
+     <div>
+       <h1 className="text-2xl text-white font-bold underline pt-7">Projects</h1>
+     </div>
       <div
-        className={`grid lg:grid-cols-3 xs:grid-cols-1 lg:gap-[100px]  xs:gap-[20px] transition-all duration-700 transform ${
+        className={`grid md:grid-cols-2 xs:grid-cols-1 gap-[20px] transition-all duration-700 transform ${
           fadeIn ? "lg:translate-y-0 " : "lg:translate-y-full "
         } ${fadeIn ? "lg:opacity-100 xs:opacity-100" : "lg:opacity-0 xs:opacity-100"}`}
       >
-        <Card className="lg:h-[400px] lg:w-[350px] xs:h-[400px] xs:w-[350px] bg-transparent rounded-sm hover:cursor-pointer hover:scale-105 hover:bg-gray-200 text-white hover:text-black transition-all  shadow-[3px_3px_5px_0px_rgb(60,68,73,.2)] ">
+        <Card className=" md:ml-16 m-2 max-w-[400px]   bg-transparent rounded-sm hover:cursor-pointer hover:scale-105 hover:bg-gray-200 text-white hover:text-black transition-all  shadow-[3px_3px_5px_0px_rgb(60,68,73,.2)] ">
           <CardContent className="flex flex-col items-center justify-center">
             <h1 className="font-bold text-lg p-4  underline">Ecommerce</h1>
-            <img
+            <div class="w-full aspect-video overflow-hidden">
+              <img
               src={ecommerce}
-              className="shadow-[3px_3px_5px_0px_rgb(60,68,73,.7)]"
+              className="shadow-[3px_3px_5px_0px_rgb(60,68,73,.7)] w-full h-full object-cover"
             />
+            </div>
             <p className="pt-3 text-[16px]">
               Built a fully functional e-commerce web application enabling users
               to browse products, manage carts, and complete payments and many
@@ -60,13 +64,15 @@ function Projects() {
             </div>
           </CardContent>
         </Card>
-        <Card className="lg:h-[400px] lg:w-[350px] xs:h-[400px] xs:w-[350px] bg-transparent rounded-sm hover:cursor-pointer hover:scale-105 hover:bg-gray-200 text-white hover:text-black transition-all shadow-[3px_3px_5px_0px_rgb(60,68,73,.2)] ">
+        <Card className=" md:mr-16 m-2 max-w-[400px]  bg-transparent rounded-sm hover:cursor-pointer hover:scale-105 hover:bg-gray-200 text-white hover:text-black transition-all shadow-[3px_3px_5px_0px_rgb(60,68,73,.2)] ">
           <CardContent className="flex flex-col items-center justify-center">
             <h1 className="font-bold text-lg  p-4 underline">Chat-App</h1>
-            <img
+            <div class="w-full aspect-video overflow-hidden">
+              <img
               src={chatapp}
-              className="shadow-[3px_3px_5px_0px_rgb(60,68,73,.7)]"
+              className="shadow-[3px_3px_5px_0px_rgb(60,68,73,.7)] w-full h-full object-cover"
             />
+            </div>
             <p className="pt-3 text-[16px]">
               Developed a real-time messaging platform enabling users to connect
               instantly. The app supports multiple chat rooms and many other

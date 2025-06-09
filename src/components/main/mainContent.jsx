@@ -88,25 +88,24 @@ function MainContent() {
   }, []);
 
   return (
-    <div className="font-raleway overflow-hidden lg:ml-[15%] md:ml-[15%] xs:h-screen lg:h-full xs:ml-0 xs:pt-20 ">
-      <div className="bg-black flex items-center justify-around  lg:p-20 xs:p-4">
-        <div>
-          <h1 className="text-white sm:text-sm md:text-md lg:text-md xs:text-[15px] font-bold">
+    <div className="font-raleway lg:ml-[200px] md:ml-[150px] h-screen pt-20 ">
+      <div className="bg-black grid grid-cols-1 md:grid-cols-2 w-full">
+        <div className="flex flex-col justify-center items-start pl-10">
+          <h1 className="text-white  font-bold xl:text-3xl lg:text-xl ">
             FullStack Developer
           </h1>
-          <h1 className="text-white lg:text-4xl sm:text-sm md:text-md  xs:text-[20px] ">
+          <h1 className="text-white xl:text-4xl lg:text-2xl ">
             Hi,I am{" "}
-            <span className="text-white lg:text-4xl sm:text-sm md:text-md  xs:text-[20px] font-extrabold">
+            <span className="text-white font-extrabold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent">
               Saman Batham
             </span>
           </h1>
-          <h1 className="text-white lg:text-xl sm:text-sm md:text-md  xs:text-[12px] font-extrabold pt-2 pb-2">
+          <h1 className="text-white  font-extrabold xl:text-xl lg:text-md">
             {currentText}
-            <span className="border-r-2 border-white animate-pulse ml-1"></span>
           </h1>
 
-          <div className="w-[70%]">
-            <p className="text-white lg:text-xl sm:text-sm md:text-md  xs:text-[10px]">
+          <div className="w-[85%]">
+            <p className="text-white xl:text-lg lg:text-sm text-[13px]">
               I am an aspiring MERN Stack Developer.I have prior experience of 7
               Years in animation.I am eager to start my career.If you have any
               opportunity for me Pls contact me.
@@ -129,69 +128,63 @@ function MainContent() {
             </Button>
           </div>
         </div>
-        <div>
+        <div className="flex item-center justify-center px-4  md:aspect-[4/3]">
           <img
             src={img}
-            width="1400px"
-            className="rounded-[50%] lg:w-[1400px] xs:w-[300px]"
+            className="rounded-[50%] lg:w-[80%] hidden md:block"
           />
         </div>
       </div>
-      <div className="flex flex-col">
-        <div className="bg-black pt-10 pl-[100px] pb-[50px] xs:-translate-x-6 lg:-translate-x-0">
+      <div className="flex flex-col md:mt-24 mt-10 gap-10">
+        <div className="bg-black flex items-center justify-center ">
           <h1 className="font-bold underline underline-offset-8 text-white">
             What I Did
           </h1>
         </div>
-        <div className="bg-black flex items-start justify-around">
-          <div
-            id="ecommerce"
-            className={`flex items-start justify gap-5 pb-10 lg:w-[450px] xs:w-[350px]  xs:translate-x-[80px] lg:-translate-x-0 lg:scale-100 xs:scale-50 transition-all duration-1000 ${
-              ecommerceVisible ? "opacity-100" : "opacity-0"
-            } ${
-              ecommerceVisible
-                ? "lg:-translate-x-0 xs:translate-x-20"
-                : "lg:-translate-x-full xs:translate-x-20"
-            }`}
-          >
-            <ShoppingBasketIcon className="h-10 w-10  text-blue-500 p-2 rounded-sm bg-gray-100" />
-            <div className="w-[400px] flex flex-col item">
-              <h1 className="font-bold text-white">E-Commerce</h1>
-              <p className="text-white">
-                Built a fully functional e-commerce web application enabling
-                users to browse products, manage carts, and complete payments
-                and many more features.
-              </p>
-              <Button
-                onClick={() => navigate("/ecommerce")}
-                className="m-2  hover:bg-green-400 hover:text-black font-bold"
-              >
-                View Details
-              </Button>
+        <div className="bg-black grid md:grid-cols-2 grid-cols-1 items-stretch gap-5 ">
+          <div className=" flex justify-center   p-5 ">
+            <div
+              id="ecommerce"
+              className={`flex items-start justify gap-5 pb-10 w-full lg:w-[80%] px-4 bg-gray-700 p-5 rounded-xl
+             `}
+            >
+              <ShoppingBasketIcon className="h-10 w-10  text-blue-500 p-2 rounded-sm bg-gray-100" />
+              <div className="w-full flex flex-col gap-1 ">
+                <h1 className="font-bold text-white text-sm">E-Commerce</h1>
+                <p className="text-white text-[12px]">
+                  Built a fully functional e-commerce web application enabling
+                  users to browse products, manage carts, and complete payments
+                  and many more features.
+                </p>
+                <Button
+                  onClick={() => navigate("/ecommerce")}
+                  className=" m-2 hover:bg-green-400 hover:text-black font-bold"
+                >
+                  View Details
+                </Button>
+              </div>
             </div>
           </div>
-          <div
-            id="chatapp"
-            className={`flex items-start justify gap-5 pb-10 lg:w-[450px] xs:w-[350px] xs:-translate-x-[82px] lg:-translate-x-0 lg:scale-100 xs:scale-50 transition-all duration-1000 ${
-              chatAppVisible
-                ? "lg:opacity-100 lg:translate-x-0 xs:opacity-100 xs:-translate-x-[82px]"
-                : "lg:opacity-0 lg:translate-x-full xs:opacity-0 xs:-translate-x-[82px]"
-            } `}
-          >
-            <MessageSquareCode className="h-10 w-10 text-blue-500 p-2 rounded-sm bg-gray-100" />
-            <div className="w-[400px] flex flex-col">
-              <h1 className="font-bold text-white">Chat-App</h1>
-              <p className="text-white">
-                Developed a real-time messaging platform enabling users to
-                connect instantly. The app supports multiple chat rooms and many
-                other features
-              </p>
-              <Button
-                onClick={() => navigate("/chatapp")}
-                className="m-2 hover:bg-green-400 hover:text-black font-bold"
-              >
-                View Details
-              </Button>
+          <div className=" flex justify-center p-5 ">
+            <div
+              id="chatapp"
+              className={`flex items-start justify gap-5 pb-10 w-full lg:w-[80%] px-4  bg-gray-700 p-5 rounded-xl`}
+            >
+              <MessageSquareCode className="h-10 w-10 text-blue-500 p-2 rounded-sm bg-gray-100" />
+              <div className="w-full flex flex-col gap-1">
+                <h1 className="font-bold text-white">Chat-App</h1>
+                <p className="text-white text-[12px]">
+                  Developed a real-time messaging platform enabling users to
+                  connect instantly. The app supports multiple chat rooms and
+                  many other features
+                </p>
+                <Button
+                  onClick={() => navigate("/chatapp")}
+                  className="m-2 hover:bg-green-400 hover:text-black font-bold"
+                >
+                  View Details
+                </Button>
+              </div>
             </div>
           </div>
         </div>
